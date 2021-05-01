@@ -6,7 +6,7 @@ class solution
      int sum(int a,int b)
      {
          if(b==0)  return a;
-          int summ =a^b; //add witgout carrying
+          int summ =a^b; //add without carrying
           int carry =(a&b)<<1;  // carry , but don't add
           return sum(summ,carry); // recurse sum + carry
      }
