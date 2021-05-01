@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+class solution 
+{
+  public:
+     int setbit(int n)
+     {
+         int count=0;
+         while(n)
+         {
+             n&=(n-1);
+               count++;
+         }
+         return count;
+     }
+     
+};
+
+ int main()
+ {
+     int t;
+      cin>>t;
+      while(t--)
+      {
+          int n;
+          cin>>n;
+          solution obj;
+          cout<<obj.setbit(n)<<endl;
+      }
+       return 0;
+ }
