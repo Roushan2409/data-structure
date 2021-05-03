@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+class solution
+{
+  public:
+      int maxxsum(int array[],int n)
+      {
+          int maxsum=array[0];
+          int curr=array[0];
+          for(int i=1;i<n;i++)
+          {
+              curr=max(array[i],curr+array[i]);
+              maxsum=max(maxsum,curr);
+          }
+          return maxsum;
+      }
+};
+
+
+ int main()
+ {
+     int t;
+     cin>>t;
+     while(t--)
+     {
+         int n;
+         cin>>n;
+         int array[n];
+         for(int i=0;i<n;i++)
+         {
+             cin>>array[i];
+         }
+         solution obj;
+         cout<<obj.maxxsum(array,n)<<endl;
+     }
+      return 0;
+ }
