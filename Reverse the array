@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// function to print the erlment of the array
+ void printarray(int array[], int size)
+ {
+     for(int i=0;i <size;i++)
+        cout<<array[i]<<" ";
+        cout<<endl;
+ }
+ // function to revesre the element  of array
+ void revarray(int array[],int start,int end)
+ {
+     if(start>=end)   return ;
+       int temp= array[start];
+        array[start]= array[end];
+        array[end]=temp;
+        revarray(array,start+1,end-1);
+ }
+ 
+  
+  int main()
+  {
+      int t;  // test cases
+      cin>>t;
+       while(t--) // loop for test case 
+       {
+           int n;
+           cin>>n;  // size of the array 
+           int array[n]; 
+           for(int i=0; i<n;i++)
+              {
+                  cin>>array[i];// enter the element of array
+              }
+              // printing the element o fthe array
+              // before the revrse of the array
+                printarray(array,n);
+                
+                revarray(array,0,n-1);
+                // calling the print function the revrse 
+                printarray(array,n);
+       }
+        return 0;
+  }
