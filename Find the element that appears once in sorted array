@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+class solution 
+{
+  public:
+    
+      int unique(int array[],int n)
+      {
+          int res=0;
+          for(int i=0;i<n;i++)
+          {
+              res^=array[i];
+          }
+          return res;
+      }
+};
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int array[n];
+        for(int i=0;i<n;i++)
+        {
+            cin>>array[i];
+        }
+        solution obj;
+         int res=obj.unique(array,n);
+        cout<<res<<endl;
+    }
+    return 0;
+}
